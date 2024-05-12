@@ -15,6 +15,221 @@
 */
 
 .page {
+  margin: 0 auto;
+  color: var(--font-color, #000);
+  font-family: var(--main-font, sans-serif);
+  font-weight: var(--font-weight, 400);
+  font-size: 18px;
+  background-color: var(--background-color, #fff);
+  background-image: var(--background-image, none);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
+  max-inline-size: 696px;
   min-block-size: 100dvb;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 102px;
+  border: 2px solid currentColor;
+  font-family: var(--accent-font, sans-serif);
+  background-color: var(--background-color, #fff);
+  min-block-size: 364px;
+}
+
+.header__logo {  
+  font-size: var(--logo-size, 65px);
+  text-transform: uppercase;
+}
+
+.header__title {
+  margin-block-start: 20px;
+  font-size: var(--title-size, 65px);
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-block-start: 25px;
+}
+
+.theme-menu__button {
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+}
+
+.theme-menu__item:has(.theme-menu__button:disabled) {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__item:has(.theme-menu__button:disabled)::before {
+  content: "▶";
+  position: absolute;
+  opacity: 0.6;
+  inset-inline-start: -15px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+  padding-block-start: 102px;
+}
+
+.card {
+  border: 2px solid currentColor;
+  color: var(--accent-color, #000);
+  background-color: var(--background-color, #FFF);
+}
+
+.card__title {
+  padding: 3px 24px;
+  font-weight: 700;
+}
+
+.image_container {
+  position: relative;
+  border-block-start: 2px solid var(--accent-color, #000);
+  border-block-end: 2px solid var(--accent-color, #000);
+}
+
+.image_container::after {
+  position: absolute;
+  opacity: 0.5;
+  color: var(--accent-color, #000);
+  font-family: var(--accent-font, sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  mix-blend-mode: hard-light;
+}
+
+.card:nth-child(1) .image_container:after,
+.card:nth-child(2) .image_container:after {
+  content: "</HTML>";
+}
+
+.card:nth-child(3) .image_container:after {
+  content: "<css>";
+}
+
+.card:nth-child(4) .image_container:after {
+  content: "<desigions>";
+}
+
+.card:nth-child(5) .image_container:after {
+  content: "care";
+}
+
+.card:nth-child(6) .image_container:after {
+  content: "<support>";
+}
+
+.card:nth-child(7) .image_container:after {
+  content: "<lifes-style: none;>";
+}
+
+.card:nth-child(8) .image_container:after {
+  content: "<experience>";
+}
+
+.card__image {
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+  aspect-ratio: 1/1;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin-block-start: clamp(25px, 1.4198rem + 0.6154vw, 27px);
+  padding: 25px;
+  font-family: Inter;
+  line-height: 21px;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+  margin-inline-end: 25px;
+  margin-block-end: 25px;
+}
+
+.card__icon-button {
+  border: none;
+  background: none;
+  block-size: 39px;
+  inline-size: 36px;
+}
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__like-button {
+  border: 2px solid var(--accent-color, #000);
+  background: none;
+  cursor: pointer;
+  block-size: 38px;
+  inline-size: 130px;
+}
+
+.button__text {
+  font-family: var(--accent-font, sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 52px;
+  background: none;
+  min-block-size: 208px;
+}
+
+.footer__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid currentColor;
+  color: var(--accent-color, #000);
+  background: none;
+  background-color: var(--background-color, #fff);
+  inline-size: 335px;
+  block-size: 51px;
+}
+
+.footer__image {
+  inline-size: 21px;
+  block-size: auto;
+}
+
+.button__text {
+  font-family: var(--accent-font, sans-serif);
+  font-weight: 400;
+  font-size: 14px;
 }
