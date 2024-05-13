@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --main-font: 'Inter';
-  --accent-font: 'PressStart2P';
+  --main-font: 'Inter', 'sans-serif';
+  --accent-font: 'PressStart2P', 'fantasy';
   --font-weight: 400;
   --font-weight-accent: 700;
   --logo-size: clamp(3.0625rem, 1.921rem + 4.9231vw, 4.0625rem);
