@@ -317,7 +317,6 @@
   justify-content: center;
   margin-block-start: 50px;
   background: transparent;
-  min-block-size: 208px;
 }
 
 .footer__button {
@@ -445,7 +444,7 @@
   }
 
   .footer {
-    min-block-size: 184px;
+    padding-bottom: 102px;
   }
 
   .footer__button {
