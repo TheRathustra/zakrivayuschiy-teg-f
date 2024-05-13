@@ -4,7 +4,7 @@
   --main-font: 'Inter';
   --accent-font: 'PressStart2P';
   --font-weight: 400;
-  --font-weight-accent: 700; 
+  --font-weight-accent: 700;
   --logo-size: clamp(3.0625rem, 1.921rem + 4.9231vw, 4.0625rem);
   --title-size: clamp(0.875rem, 0.2329rem + 2.7692vw, 1.4375rem);
 
@@ -16,5 +16,5 @@
   --background-color: #fff;
   --background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
                       repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-                      repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);                    
+                      repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 }
