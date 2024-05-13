@@ -18,12 +18,12 @@
   margin: 0 auto;
   color: var(--font-color, #000);
   font-family: var(--main-font, sans-serif);
-  font-weight: var(--font-weight, 400);
   font-size: 18px;
   background-color: var(--background-color, #fff);
   background-image: var(--background-image, none);
   background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: 'wght' var(--font-weight, 400);
   min-inline-size: 320px;
   max-inline-size: 696px;
   min-block-size: 100dvb;
@@ -43,7 +43,7 @@
   min-block-size: 364px;
 }
 
-.header__logo {  
+.header__logo {
   font-size: var(--logo-size, 65px);
   text-transform: uppercase;
 }
@@ -111,7 +111,7 @@
 
 .card__title {
   padding: 3px 24px;
-  font-weight: 700;
+  font-weight: var(--font-weight-accent, 700);
 }
 
 .image_container {
@@ -304,6 +304,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   border: 2px solid currentColor;
   color: var(--accent-color, #000);
   background-color: var(--background-color, #fff);
@@ -330,9 +331,13 @@
   stroke: var(--accent-color, #000);
 }
 
+.dialog__form_button {
+  inline-size: 100%;
+}
+
 .dialog__button {
-  color: var(--accent-color, #000);
   border: 2px solid var(--accent-color, #000);
+  color: var(--accent-color, #000);
   background: transparent;
   max-block-size: 38px;
   max-inline-size: 293px;
