@@ -39,7 +39,7 @@
   border: 2px solid currentColor;
   font-family: var(--accent-font, sans-serif);
   background-color: var(--background-color, #fff);
-  min-block-size: 368px;
+  min-block-size: clamp(327px, 17.4808rem + 12.6154vw, 368px);
 }
 
 .header__logo {
@@ -128,6 +128,7 @@
 
 .image_container::after {
   position: absolute;
+  z-index: 1;
   opacity: 0.5;
   color: var(--accent-color, #000);
   font-family: var(--accent-font, sans-serif);
@@ -151,6 +152,7 @@
   border-block-start: 2px solid var(--accent-color, #000);
   border-block-end: 2px solid var(--accent-color, #000);
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -204,10 +206,9 @@
 .card__buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 4px;
   margin-inline-end: 25px;
   margin-block-start: 25px;
-  margin-block-end: 25px;
+  margin-block-end: 23px;
 }
 
 .card__like-button {
@@ -226,6 +227,7 @@
 }
 
 .button__text {
+  z-index: 1;
   color: var(--button-text-color, #fff);
   font-family: var(--accent-font, sans-serif);
   font-weight: 400;
@@ -234,10 +236,6 @@
 }
 
 /* Сердечко */
-
-.like-icon {
-  block-size: 36px;
-}
 
 .like-icon .contour {
   fill: var(--heart-contour-color, #000);
@@ -255,11 +253,12 @@
 .card__icon-button {
   display: flex;
   justify-content: center;
+  margin-block-start: 2px;
   border: none;
   background: none;
   cursor: pointer;
-  block-size: 36px;
-  inline-size: 36px;
+  inline-size: 51px;
+  block-size: auto;
 }
 
 .card__icon-button:focus {
@@ -294,6 +293,7 @@
 }
 
 .footer__image {
+  z-index: 1;
   color: var(--button-text-color, #fff);
   fill: currentColor;
   stroke: currentColor;
@@ -313,17 +313,24 @@
   align-items: center;
   gap: 30px;
   border: 2px solid currentColor;
+  padding: 20px;
   color: var(--accent-color, #000);
   background-color: var(--background-color, #fff);
   max-block-size: 193px;
-  max-inline-size: 357px;
+  max-inline-size: clamp(341px, 20.1587rem + 4.9231vw, 357px);
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .dialog__header {
   display: grid;
   grid-template-columns: min-content 1fr;
+  align-items: center;
   gap: 20px;
-  max-inline-size: 293px;
+  line-height: 21px;
+  text-transform: uppercase;
+  max-inline-size: clamp(257px, 13.4663rem + 11.0769vw, 293px);
+  inline-size: 100%;
 }
 
 .dialog::backdrop {
@@ -339,6 +346,9 @@
 }
 
 .dialog__form_button {
+  max-inline-size: clamp(257px, 13.4663rem + 11.0769vw, 293px);
+  max-block-size: 38px;
+  block-size: 100%;
   inline-size: 100%;
 }
 
@@ -347,8 +357,9 @@
   color: var(--accent-color, #000);
   background: transparent;
   max-block-size: 38px;
-  max-inline-size: 293px;
+  max-inline-size: clamp(257px, 13.4663rem + 11.0769vw, 293px);
   inline-size: 100%;
+  block-size: 100%;
   mix-blend-mode: normal;
 }
 
@@ -384,4 +395,32 @@
 
 .card:nth-child(9) .image_container .card__image {
   filter: sepia(70%) saturate(158%);
+}
+
+/* media */
+@media (width <= 375px) {
+  
+  .page {
+    width: 100%;
+  }
+
+  .footer {
+    min-block-size: 184px;
+  }
+
+  .footer__button {
+    flex-direction: column;
+    inline-size: 310px;
+    block-size: 84px;
+  }
+
+  .footer__image {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog[open] {
+    max-block-size: 195px;
+  }
+
 }
